@@ -1,0 +1,7 @@
+<div class="row">
+    <span>Sortings: </span>
+    <button class="btn btn-primary" (click)="sortBy('donwloadSpeed')">By download</button>
+    <button class="btn btn-primary" (click)="sortBy('uploadSpeed')">By upload</button>
+    <button class="btn btn-primary" (click)="sortBy('price')">By price</button>
+</div>
+<app-tariff *ngFor="let tariff of sortedTariffs;trackBy: trackByFn" [tariff]="tariff"></app-tariff>

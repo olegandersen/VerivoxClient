@@ -1,0 +1,23 @@
+<div class="row with-border">
+  <div class="col-md-1 col-sm-1 col-xs-1">{{tariff.id}}</div>
+  <div class="col-md-3 col-sm-3 col-xs-4">{{tariff.tarifName}}</div>
+  <div class="col-md-3 col-sm-4">
+    <div>&uarr; {{tariff.uploadSpeed}} Mbit/s</div>
+    <div>&darr; {{tariff.donwloadSpeed}} Mbit/s</div>
+  </div>
+  <div class="col-md-2 desktop">
+    <ul>
+      <li>Tariff benefit 1</li>
+      <li>Tariff benefit 2</li>
+      <li>Tariff benefit 3</li>
+    </ul>
+  </div>
+  <div class="col-md-3 col-sm-4 mobile">
+    <div>{{tariff.price}}</div>
+    <a *ngIf="!isFromRoute" class="btn btn-primary" [routerLink]="['/tariff', tariff.id]">To Tariff</a>
+  </div>
+  <div class="in-mobile">
+    <div>{{tariff.price}}</div>
+    <a *ngIf="!isFromRoute" class="btn btn-primary" [routerLink]="['/tariff', tariff.id]">&gt;</a>
+  </div>
+</div>

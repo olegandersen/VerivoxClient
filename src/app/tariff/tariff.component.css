@@ -1,0 +1,25 @@
+.with-border {
+    border: 1px solid black;    
+    margin: 2px;
+}
+
+.in-mobile {
+    display: none
+}
+
+@media (max-width: 1200px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .desktop,
+    .mobile {
+        display: none;
+    }
+
+    .in-mobile {
+        display: block;
+    }
+}
